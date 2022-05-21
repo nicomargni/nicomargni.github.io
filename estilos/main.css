@@ -1,0 +1,314 @@
+/*-------------------------------- Colores -----------------------------*/
+.animaciones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  border: none; }
+
+.coin {
+  animation-name: coin;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-direction: alternate; }
+  .coin img {
+    width: 40px;
+    height: 40px; }
+
+@keyframes coin {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+body {
+  background-image: linear-gradient(to left, red, yellow); }
+
+/*--------------------------------- mapa -------------------------------*/
+/*--------------------------------- Mixin ------------------------------*/
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Titillium Web", sans-serif; }
+  body h1 {
+    font-family: "Rowdies", cursive;
+    color: green; }
+  body h2 {
+    font-family: "Rowdies", cursive;
+    color: green; }
+  body h3 {
+    font-family: "Rowdies", cursive;
+    color: green; }
+
+/*-----------------------------------Nav-----------------------------------*/
+.navegacion {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-image: url(../imagenes/header.png);
+  background-size: contain; }
+  .navegacion a {
+    color: #50084a;
+    font-family: "Rowdies", cursive; }
+  .navegacion > * {
+    transform: rotate(-20deg);
+    transition: 2s; }
+    .navegacion > *:hover {
+      color: #805300;
+      transform: scale(1.2); }
+
+/*-----------------------------------Index---------------------------------*/
+.mainA {
+  margin-top: 10px;
+  width: 100%; }
+  .mainA .indexTitulo {
+    display: flex;
+    justify-content: center;
+    color: green;
+    font-size: 40px; }
+  .mainA .portada {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center; }
+    .mainA .portada img {
+      width: auto;
+      height: auto;
+      max-width: 500px;
+      max-height: 300px;
+      margin: 5px; }
+    .mainA .portada .portadaB {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap; }
+      .mainA .portada .portadaB img {
+        width: auto;
+        height: auto;
+        max-width: 350px;
+        max-height: 150px;
+        margin: 1px; }
+
+.mainB .left {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: yellow;
+  align-items: left;
+  background-image: url(../imagenes/lanzRecientes.jpg); }
+  .mainB .left h2 {
+    color: green; }
+  .mainB .left .listas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly; }
+    .mainB .left .listas .lanzRecientes {
+      display: flex;
+      flex-direction: column;
+      align-items: left; }
+    .mainB .left .listas .recomendaciones {
+      display: flex;
+      align-items: left;
+      flex-direction: column;
+      flex-wrap: wrap; }
+      .mainB .left .listas .recomendaciones h3 {
+        color: green;
+        font-size: 19px; }
+
+.mainB .article {
+  margin-top: 2px;
+  color: white;
+  text-align: left;
+  background-color: #242424; }
+  .mainB .article h2 {
+    color: green;
+    font-size: 26px; }
+  .mainB .article p {
+    color: yellow;
+    font-size: small; }
+
+.vaultBoy {
+  display: flex;
+  background-image: url(../imagenes/vault-boy.jpg);
+  background-size: contain;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+/*-------------------------------------------------------Galeria---------------------------------------*/
+.main {
+  display: flex;
+  justify-content: center;
+  background-image: url(../imagenes/fondoGaleria.jpg); }
+  .main .tituloGaleria {
+    display: flex;
+    justify-content: center; }
+  .main .tituloG {
+    display: flex;
+    color: green;
+    font-size: 26px; }
+  .main .carouselGaleria {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column; }
+    .main .carouselGaleria .carousel {
+      width: 300px;
+      height: 320px;
+      background-color: black; }
+      .main .carouselGaleria .carousel .carousel-item {
+        width: 300px;
+        height: 320px; }
+        .main .carouselGaleria .carousel .carousel-item img {
+          width: 300px;
+          height: 320px; }
+  .main .sectorResenias {
+    margin-top: 5px;
+    margin-bottom: 5px; }
+
+/*-----------------------------------------Contactanos---------------------------------------*/
+.contacto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly; }
+  .contacto .form {
+    border: solid green;
+    color: yellow;
+    margin: 4px;
+    padding: 4px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    background-image: url(../imagenes/orcoBen.jpg); }
+    .contacto .form .formulario .campoTransparente {
+      background: transparent; }
+  .contacto .gamer {
+    width: 400px;
+    height: 500px; }
+    .contacto .gamer img {
+      width: 400px;
+      height: 500px; }
+
+/*-----------------------------------------Comunidad-------------------------------------*/
+.comu .comunidadMain {
+  background-image: linear-gradient(to left, white, yellow);
+  border: 1px solid black; }
+
+.comu .tituloComunidad {
+  display: flex;
+  justify-content: center;
+  color: green; }
+
+.comu .dibujos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 5px; }
+  .comu .dibujos img {
+    width: 300px;
+    height: 350px; }
+
+.comu .cake {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 3px; }
+  .comu .cake img {
+    width: 400px;
+    height: 400px; }
+
+/*----------------------------------------- Info -----------------------------------------*/
+.mainInfo {
+  border: 2px solid blue;
+  margin-top: 50px;
+  background-image: linear-gradient(to left, white, grey); }
+  .mainInfo h2 {
+    color: green; }
+  .mainInfo h3 {
+    color: green; }
+  .mainInfo .promociones {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center; }
+
+.objetivosInfo {
+  border: 1px solid black; }
+
+.logrosInfo {
+  border: 1px solid black; }
+
+/*--------------------- footer ---------------------*/
+.footer {
+  background-color: #3b3b3b;
+  width: auto;
+  height: 200px;
+  margin-top: 3px; }
+  .footer .footerCompuesto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center; }
+    .footer .footerCompuesto .footerNav a {
+      color: red; }
+    .footer .footerCompuesto .logos {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap; }
+      .footer .footerCompuesto .logos .siguenos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center; }
+        .footer .footerCompuesto .logos .siguenos .logoRedes {
+          width: 40px;
+          height: 40px;
+          margin: 2px; }
+
+/*------------------------------------------ Media Queries -------------------------*/
+@media only screen and (max-width: 480px) {
+  .mainA .portada {
+    width: auto;
+    height: auto; }
+    .mainA .portada img {
+      width: 320px;
+      height: 200px;
+      margin-left: 10px; }
+    .mainA .portada .portadaB img {
+      width: 320px;
+      height: 200px; }
+  .dibujos {
+    flex-direction: column; }
+  .cake img {
+    width: 300px;
+    height: 300px; } }
+
+@media only screen and (max-width: 800px) {
+  .mainA .indexTitulo {
+    font-size: 26px; }
+  .mainA .portada {
+    flex-wrap: wrap;
+    justify-content: center; } }
+
+@media only screen and (max-width: 860px) {
+  .contacto {
+    flex-wrap: wrap; }
+    .contacto .gamer {
+      margin-left: 15px; }
+      .contacto .gamer img {
+        width: 350px;
+        height: 420px; } }

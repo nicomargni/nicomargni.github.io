@@ -1,0 +1,27 @@
+$estilo: estilo1;
+
+body{
+    @if ($estilo == estilo1){
+        background-image: linear-gradient(to left, red, yellow);
+    }
+    @else if ($estilo == estilo2){
+        background-image: linear-gradient(to left,rgb(185, 123, 8), rgb(197, 1, 1));
+    }
+    @else {
+        background-image: linear-gradient(to left, rgb(97, 22, 22), rgb(182, 118, 0));
+    }
+}
+
+/*--------------------------------- mapa -------------------------------*/
+$tamaños-fuentes: (
+    "chica": 19px,
+    "media": 26px,
+    "grande": 40px);
+
+/*--------------------------------- Mixin ------------------------------*/
+@mixin flexbox ($flex, $direction, $wrap){
+    display: $flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+

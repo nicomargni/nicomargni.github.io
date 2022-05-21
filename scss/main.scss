@@ -1,0 +1,424 @@
+@import "fuentes";
+@import "colores";
+@import "animaciones";
+@import "variables";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $fuente-principal;
+
+	h1 {
+		font-family: $fuente-titulos;
+		color: $color-titulos;
+	}
+
+	h2 {
+		font-family: $fuente-titulos;
+		color: $color-titulos;
+	}
+
+	h3 {
+		font-family: $fuente-titulos;
+		color: $color-titulos;
+	}
+}
+
+/*-----------------------------------Nav-----------------------------------*/
+.navegacion {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	justify-content: space-between;
+	padding: 20px;
+	background-image: url(../imagenes/header.png);
+	background-size: contain;
+
+	a {
+		color: $color-primario-nav;
+		font-family: $fuente-titulos;
+	}
+
+	>* {
+		transform: rotate(-20deg);
+		transition: 2s;
+
+		&:hover {
+			color: $color-secundario-nav;
+			transform: scale(1.2);
+		}
+	}
+}
+
+/*-----------------------------------Index---------------------------------*/
+
+
+
+
+.mainA {
+	margin-top: 10px;
+	width: 100%;
+
+	.indexTitulo {
+		display: flex;
+		justify-content: center;
+		color: $color-titulos;
+		font-size: map-get($tamaños-fuentes, "grande");
+	}
+
+	.portada {
+		@include flexbox (flex, row, nowrap);
+		justify-content: center;
+
+		img {
+			width: auto;
+			height: auto;
+			max-width: 500px;
+			max-height: 300px;
+			margin: 5px;
+
+		}
+
+		.portadaB {
+			@include flexbox (flex, column, wrap);
+
+			img {
+				width: auto;
+				height: auto;
+				max-width: 350px;
+				max-height: 150px;
+				margin: 1px;
+			}
+		}
+	}
+
+
+}
+
+.mainB {
+	.left {
+		@include flexbox (flex, column, wrap);
+		color: yellow;
+		align-items: left;
+		background-image: url(../imagenes/lanzRecientes.jpg);
+
+		h2 {
+			color: $color-titulos;
+		}
+
+		.listas {
+			@include flexbox (flex, row, nowrap);
+			justify-content: space-evenly;
+
+			.lanzRecientes {
+				display: flex;
+				flex-direction: column;
+				align-items: left;
+			}
+
+			.recomendaciones {
+				display: flex;
+				align-items: left;
+				flex-direction: column;
+				flex-wrap: wrap;
+
+				h3 {
+					color: $color-titulos;
+					font-size: map-get($tamaños-fuentes, "chica");
+				}
+			}
+		}
+	}
+
+	.article {
+		margin-top: 2px;
+		color: white;
+		text-align: left;
+		background-color: rgb(36, 36, 36);
+
+		h2 {
+			color: $color-titulos;
+			font-size: map-get($tamaños-fuentes, "media");
+		}
+
+		p {
+			color: rgb(255, 255, 0);
+			font-size: small
+		}
+	}
+
+}
+
+
+.vaultBoy {
+	display: flex;
+	background-image: url(../imagenes/vault-boy.jpg);
+	background-size: contain;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+/*-------------------------------------------------------Galeria---------------------------------------*/
+
+
+
+.main {
+	display: flex;
+	justify-content: center;
+	background-image: url(../imagenes/fondoGaleria.jpg);
+
+	.tituloGaleria {
+		display: flex;
+		justify-content: center;
+	}
+
+	.tituloG {
+		display: flex;
+		color: $color-titulos;
+		font-size: map-get($tamaños-fuentes, "media");
+	}
+
+	.carouselGaleria {
+		margin-bottom: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		flex-direction: column;
+
+		.carousel {
+			width: 300px;
+			height: 320px;
+
+			.carousel-item {
+				width: 300px;
+				height: 320px;
+
+				img {
+					width: 300px;
+					height: 320px;
+				}
+			}
+
+			background-color: black;
+		}
+	}
+
+	.sectorResenias {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+}
+
+
+
+
+
+
+
+/*-----------------------------------------Contactanos---------------------------------------*/
+.contacto {
+	@include flexbox (flex, row, nowrap);
+	justify-content: space-evenly;
+
+	.form {
+		border: solid green;
+		color: yellow;
+		margin: 4px;
+		padding: 4px;
+		width: auto;
+		height: auto;
+		border-radius: 10px;
+		background-image: url(../imagenes/orcoBen.jpg);
+			.formulario{
+				.campoTransparente{
+					background: transparent;
+				}
+			}
+	}
+
+	.gamer {
+		width: 400px;
+		height: 500px;
+
+		img {
+			width: 400px;
+			height: 500px;
+		}
+	}
+
+}
+
+
+/*-----------------------------------------Comunidad-------------------------------------*/
+.comu {
+	.comunidadMain {
+		background-image: linear-gradient(to left, white, yellow);
+		border: 1px solid black;
+	}
+
+	.tituloComunidad {
+		display: flex;
+		justify-content: center;
+		color: $color-titulos;
+	}
+
+	.dibujos {
+		@include flexbox (flex, row, wrap);
+		justify-content: space-evenly;
+		margin: 5px;
+
+		img {
+			width: 300px;
+			height: 350px;
+		}
+	}
+
+	.cake {
+		@include flexbox (flex, column, wrap);
+		justify-content: center;
+		align-items: center;
+		margin: 3px;
+
+		img {
+			width: 400px;
+			height: 400px;
+		}
+	}
+}
+
+
+/*----------------------------------------- Info -----------------------------------------*/
+.mainInfo {
+	border: 2px solid blue;
+	margin-top: 50px;
+	background-image: linear-gradient(to left, white, grey);
+
+
+	h2 {
+		color: $color-titulos;
+	}
+
+	h3 {
+		color: $color-titulos;
+	}
+
+	.promociones {
+		@include flexbox (flex, column, nowrap);
+		align-items: center;
+	}
+}
+
+.objetivosInfo {
+	border: 1px solid black;
+}
+
+.logrosInfo {
+	border: 1px solid black;
+}
+
+/*--------------------- footer ---------------------*/
+.footer {
+	background-color: rgb(59, 59, 59);
+	width: auto;
+	height: 200px;
+	margin-top: 3px;
+
+	.footerCompuesto {
+		@include flexbox (flex, row, nowrap);
+		justify-content: space-evenly;
+		align-items: center;
+		align-content: center;
+
+		.footerNav {
+			a {
+				color: red;
+			}
+		}
+
+		.logos {
+			@include flexbox (flex, column, nowrap);
+
+			.siguenos {
+				@include flexbox (flex, row, nowrap);
+				justify-content: center;
+
+				.logoRedes {
+					width: 40px;
+					height: 40px;
+					margin: 2px;
+				}
+			}
+		}
+
+	}
+}
+
+/*------------------------------------------ Media Queries -------------------------*/
+@media only screen and (max-width: 480px) {
+	.mainA {
+		.portada {
+			width: auto;
+			height: auto;
+
+			img {
+				width: 320px;
+				height: 200px;
+				margin-left: 10px;
+			}
+
+			.portadaB {
+				img {
+					width: 320px;
+					height: 200px;
+				}
+			}
+		}
+
+
+	}
+
+	.dibujos {
+		flex-direction: column;
+	}
+
+	.cake {
+		img {
+			width: 300px;
+			height: 300px;
+		}
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.mainA {
+		.indexTitulo {
+			font-size: map-get($tamaños-fuentes, "media");
+		}
+
+		.portada {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+}
+
+@media only screen and (max-width: 860px) {
+	.contacto {
+		flex-wrap: wrap;
+
+		.gamer {
+			margin-left: 15px;
+
+			img {
+				width: 350px;
+				height: 420px;
+			}
+		}
+	}
+}

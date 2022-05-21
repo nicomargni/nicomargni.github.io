@@ -1,0 +1,26 @@
+.animaciones {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+	border: none;
+}
+.coin {
+	animation-name: coin;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-direction: alternate;
+	img {
+		width: 40px;
+		height: 40px;
+	}
+}
+@keyframes coin {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
