@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game4Fun</title>
+    <link rel="icon" href="../img/logo.ico">
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="js/stock.js"></script>
+    <script defer src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="titulo" class="titulo">Game4Fun</h1>
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+    </header>
+
+    <div class="mainA">
+        <h2 class="indexTitulo">Los mejores precios, los mejores juegos</h2>
+        <div class="portada">
+            <div>
+                <a href="https://store.epicgames.com/es-ES/p/evil-dead-the-game"><img
+                        src="img/evildead.jpg" alt="jpg"></a>
+            </div>
+
+            <div class="portadaB">
+                <img src="img/juegosgamecube.jpg" alt="jpg">
+                <a href="https://store.steampowered.com/app/1341290/We_Were_Here_Forever/"><img
+                        src="img/wearehere.jpg" alt="jpg"></a>
+            </div>
+        </div>
+
+        <div class="cCompras">
+            <h2>Carrito de compras</h2>
+            <p>A continuacion una lista de nuestros articulos en stock</p>
+        </div>
+
+    <main id="contenedor-productos">
+
+    </main>
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+               
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+            <button id="realizarCompra" class="botonComprar" onclick="mostrar()">Realizar compra</button>
+        </div>
+    </div>
+
+    <div class="linkPoke">
+        <h3>Prueba nuestra pokedex online!</h3>
+        <a href="pokedex.html"> <img src="/img/pokedexFoto.png" alt="jpg"></a>
+    </div>
+
+    <footer class="footer">
+        <div class="footerCompuesto">
+            <div class="footerNav">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pokedex.html">Pokedex</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Comunidad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Info</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="logos">
+                <div class="siguenos">
+                    <a href="https://www.facebook.com"> <img src="img/facebook.png" class="logoRedes"
+                            alt="logoFacebook"></a>
+                    <a href="https://twitter.com"> <img src="img/twitter.jpg" class="logoRedes"
+                            alt="logoTwitter"></a>
+                    <a href="https://www.instagram.com"> <img src="img/instagram.png" class="logoRedes"
+                            alt="logoInstagram"></a>
+                </div>
+                <p>Todos los derechos reservados.</p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>
